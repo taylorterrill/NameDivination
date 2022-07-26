@@ -1,3 +1,65 @@
 * {
- background-color: black;   
+    background-color: rgba(130, 243, 200, 0.568);   
+    text-align: center;
+    font-family: 'Henny Penny', cursive;
 }
+
+section {
+    height: 50vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    height: 50px;
+    font-size: 20px;
+}
+
+button:hover {
+    color: blue;
+}
+
+.title {
+    font-size: 80px;
+}
+
+.subtitle {
+    font-size: 50px;
+}
+
+.tile {
+    justify-content: center;
+    border-style: solid;
+    border-color: green;
+    border-width: 20px;
+    font-size: xx-large;
+}
+
+#name-input {
+    height: 50px;
+    text-align: left;
+    padding: 5px;
+}
+
+#input-bar {
+    height: 50vh;
+}
+
+#top-banner {
+    height: 20vh;
+    padding: 30px;
+    font-size: 50px;
+}
+
+#top-bar {
+    height: 30vh;
+    padding: 20px;
+}
+
+#bottom-bar {
+    height: 50vh;
+    padding: 20px;
+}
+
