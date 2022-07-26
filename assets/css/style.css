@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Roboto:ital,wght@1,100&display=swap');
+
 * {
-    background-color: rgba(130, 243, 200, 0.568);   
+    background-color: rgba(130, 243, 200);   
     text-align: center;
     font-family: 'Henny Penny', cursive;
 }
@@ -15,10 +17,15 @@ a {
 button {
     height: 50px;
     font-size: 20px;
+    width: 20vw;
 }
 
 button:hover {
     color: blue;
+}
+
+input {
+    width: 40wv;
 }
 
 .title {
