@@ -2,6 +2,7 @@ var savedName = localStorage.getItem('name-input');
 var userAge = document.querySelector('#user-age');
 var userGender = document.querySelector('#user-gender');
 var userNationality = document.querySelector('#user-nationality');
+var userDefinition = document.querySelector('#urban');
 
 const regionNames = new Intl.DisplayNames(
     ['en'], { type: 'region' }
@@ -68,9 +69,40 @@ function getUserNationality(user) {
         });
 };
 
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'f9651b0ef4mshe6dc6243ac9e0f6p19acc7jsn5b8609d0e4d2',
+		'X-RapidAPI-Host': 'mashape-community-urban-dictionary.p.rapidapi.com'
+	}
+};
+
+function getUrbanDictionary(user) {
+    var apiUrl = 'https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=' + user;
+
+    fetch(apiUrl, options)
+        .then(function (response) {
+            if (response.ok) {
+                console.log(response);
+                response.json().then(function (data) {
+                    console.log(data);
+                    var definitionReturn = data['list'][0]['definition']
+                    console.log(definitionReturn);
+                    userDefinition.textContent = "According to the Urban Dictionary, this is what your name means: " + definitionReturn;
+                });
+            } else {
+                alert('Error: ' + response.statusText);
+            }
+        })
+        .catch(function (error) {
+            alert('Unable to connect to genderize.io');
+        });
+};
+
 window.onload = () => {
     getUserAge(savedName);
     getUserGender(savedName);
     getUserNationality(savedName);
+    getUrbanDictionary(savedName);
 };
 
