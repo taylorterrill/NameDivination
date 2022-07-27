@@ -3,15 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Better Title</title>
+        <title>Name Divination</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
-        <div id="top-banner">
-            <h2>Based on your name....</h2>
+        <div class="row" id="top-banner">
+            <h2>Based on your name, we have determined that....</h2>
         </div>
-        <div class="columns" id="top-bar">
+        <div class="columns">
             <div class="column tile" id="user-age">
               You are __ years old.
             </div>
@@ -22,9 +22,13 @@
               You are from _____.
             </div>
         </div>
-        <div class="tile" id="bottom-bar">
-            According to the Urban Dictionary, this is what your name means:
+        
+        <div class ="columns">
+          <div class="column tile" id="urban">
+              According to the Urban Dictionary, this is what your name means:
+          </div>
         </div>
+        
         <footer></footer>
 
         <script src="assets/js/page.js"></script>
