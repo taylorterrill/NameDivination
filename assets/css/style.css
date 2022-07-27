@@ -8,6 +8,7 @@
 
 section {
     height: 50vh;
+
     justify-content: center;
 }
 
@@ -53,6 +54,7 @@ input {
 
 #input-bar {
     height: 50vh;
+
     padding: 100px;
 }
 
