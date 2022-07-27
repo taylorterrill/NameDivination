@@ -8,6 +8,8 @@
 
 section {
     height: 50vh;
+
+    justify-content: center;
 }
 
 a {
@@ -25,7 +27,7 @@ button:hover {
 }
 
 input {
-    width: 40wv;
+    width: 40vw;
 }
 
 .title {
@@ -52,6 +54,8 @@ input {
 
 #input-bar {
     height: 50vh;
+
+    padding: 100px;
 }
 
 #top-banner {
