@@ -1,3 +1,4 @@
+// Clears local storage when the page loads
 window.onload = () => {
     localStorage.clear();
 }
