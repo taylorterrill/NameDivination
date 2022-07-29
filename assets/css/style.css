@@ -1,19 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Roboto:ital,wght@1,100&display=swap');
 
 * {
-    background-color: rgb(211, 140, 252);   
+    background-color: rgb(211, 140, 252); 
     text-align: center;
     font-family: 'Henny Penny', cursive;
 }
 
 html {
     background-color: rgb(211, 140, 252);  
-}
-
-body {
-    margin: 0;
-    height: 100vh;
-    background-color: rgb(211, 140, 252); 
 }
 
 section {   
@@ -28,7 +22,7 @@ a {
 button {
     height: 80px;
     font-size: 40px;
-    width: 20vw;
+    width: auto;
 }
 
 input {
@@ -76,5 +70,3 @@ input {
     padding: 30px;
     font-size: 80px;
 }
-
-

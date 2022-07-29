@@ -60,7 +60,6 @@ function getUserNationality(user) {
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
-                    console.log(data);
                     var nationalityReturn = data['country'][0]['country_id']
                     userNationality.textContent = "You are from " + regionNames.of(nationalityReturn) + ".";
                 });
@@ -73,7 +72,7 @@ function getUserNationality(user) {
         });
 };
 
-//provided on the online resource for the API (key)
+// Provided on the online resource for the API (key)
 
 const options = {
 	method: 'GET',
@@ -83,7 +82,7 @@ const options = {
 	}
 };
 
-//Accessess unoficial UrbanDictionary API to get defintions
+// Accessess unoficial UrbanDictionary API to get defintions
 
 function getUrbanDictionary(user) {
     var apiUrl = 'https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=' + user;
@@ -92,10 +91,8 @@ function getUrbanDictionary(user) {
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
-                    console.log(data);
-                    var definitionReturn = data['list'][0]['definition']
-                    console.log(definitionReturn);
-                    userDefinition.textContent = "According to the Urban Dictionary, this is what your name means: " + definitionReturn;
+                    var definitionReturn = data['list'][0]['definition'];
+                    userDefinition.textContent = "Acccording to the Urban Dictionary, this is what your name means: " + definitionReturn;
                 });
             } else {
                 userDefinition.textContent = "We were unable to determine a definition for your name."; 
@@ -109,9 +106,12 @@ function getUrbanDictionary(user) {
 //Runs all of the functions once the page is loaded
 
 window.onload = () => {
-    getUserAge(savedName);
-    getUserGender(savedName);
-    getUserNationality(savedName);
-    getUrbanDictionary(savedName);
+    // Checks to see if a name has been typed in the input bar
+    if (savedName !== "")  {
+        getUserAge(savedName);
+        getUserGender(savedName);
+        getUserNationality(savedName);
+        getUrbanDictionary(savedName);
+    }
 };
 
