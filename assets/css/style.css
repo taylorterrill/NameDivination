@@ -1,37 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Roboto:ital,wght@1,100&display=swap');
 
 * {
-    background-color: rgb(255, 209, 139);   
+    background-color: rgb(211, 140, 252);   
     text-align: center;
     font-family: 'Henny Penny', cursive;
-    background-size: cover;
 }
 
-section {
-    height: 50vh;
+html {
+    background-color: rgb(211, 140, 252);  
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(211, 140, 252); 
+}
+
+section {   
     justify-content: center;
 }
 
 a {
     text-decoration: none;
+    color: purple;
 }
 
 button {
-    height: 50px;
-    font-size: 20px;
+    height: 80px;
+    font-size: 40px;
     width: 20vw;
-}
-
-button:hover {
-    color: blue;
 }
 
 input {
     width: 40vw;
+    height: 80px;
+    font-size: 40px;
 }
 
 .title {
-    font-size: 80px;
+    font-size: 150px;
 }
 
 .subtitle {
@@ -41,27 +48,33 @@ input {
 .tile {
     justify-content: center;
     border-style: solid;
-    border-color: green;
-    border-width: 10px;
+    box-shadow: inset 0px 0px 5px lightpink, 0px 0px 10px purple; 
+    border-color: purple;
+    border-width: 3px;
     font-size: xx-large;
-    margin: 10px;
-}
+    margin: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+}   
 
 #name-input {
-    height: 50px;
     text-align: left;
     padding: 5px;
 }
 
-#input-bar {
-    height: 50vh;
+#enter-button:hover {
+    border-width: 3px;
+    border-style: solid;
+    border-color: purple;
+}
 
-    padding: 100px;
+#input-bar {
+    padding: 30px;
 }
 
 #top-banner {
     padding: 30px;
-    font-size: 50px;
+    font-size: 80px;
 }
 
 
